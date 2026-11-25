@@ -21,3 +21,15 @@ When generating the live demo site, images copied from `_brief/` to `clients/<de
   - Location / Service Area: 
   - Business Hours: 
   - Form / Booking Destination: (e.g., `mailto:`, Formspree/Web3Forms, or Calendly/Google Calendar link)
+
+## Existing Website Revamp (`_brief/existing-site/`)
+- **Existing Website URL:** 
+- **Saved Webpage / Screenshot Filenames (placed in `_brief/existing-site/`):** (Save Page As `.html` + `*_files/`, `.zip`, full-page `.png`, or `.pdf`)
+- **Elements / Copy to Keep:** 
+- **Pain Points to Fix:** 
+- **Detected Primary / Accent Brand Colors:** (Leave blank to auto-sample dominant & accent hex colors from logo/screenshot for Preset #1)
+- **"What We Improved" (3-Bullet Follow-Up Call Talking Points):**
+  1. 
+  2. 
+  3. 
+

@@ -14,6 +14,15 @@
     });
   }
 
+  const upgradesBtn = document.getElementById("proposalUpgradesBtn");
+  const upgradesCard = document.getElementById("proposalUpgradesCard");
+  if (upgradesBtn && upgradesCard) {
+    function closeUpgrades() { upgradesCard.hidden = true; upgradesBtn.setAttribute("aria-expanded", "false"); }
+    upgradesBtn.addEventListener("click", (e) => { e.stopPropagation(); const open = upgradesCard.hidden; upgradesCard.hidden = !open; upgradesBtn.setAttribute("aria-expanded", String(open)); });
+    document.addEventListener("click", (e) => { if (!upgradesCard.hidden && !upgradesCard.contains(e.target) && !upgradesBtn.contains(e.target)) closeUpgrades(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !upgradesCard.hidden) { closeUpgrades(); upgradesBtn.focus(); } });
+  }
+
   const menuBtn = document.getElementById("mobileMenuBtn");
   const nav = document.getElementById("primaryNav");
   if (menuBtn && nav) {

@@ -44,6 +44,8 @@ body[data-preview-mode="template"] #proposalPreviewBar,
 
 /* Proposal Preview Top Bar */
 .proposal-bar {
+  position: relative;
+  z-index: 55;
   background: #0f172a;
   color: #f8fafc;
   border-bottom: 2px solid #14b8a6;
@@ -653,3 +655,10 @@ h1 {
 .legal-card h2 { font-size: 1.2rem; margin-top: 0.4rem; }
 .legal-card p, .legal-card li { color: var(--muted); }
 .legal-card ul { padding-left: 1.25rem; display: grid; gap: 0.4rem; }
+
+.proposal-upgrades-btn { min-height: 44px; padding: 0 0.85rem; border-radius: 8px; border: 1px solid #5eead4; background: rgba(20, 184, 166, 0.14); color: #5eead4; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+.proposal-upgrades-btn[hidden], .proposal-upgrades-card[hidden] { display: none; }
+.proposal-upgrades-card { position: absolute; top: calc(100% + 6px); right: 1.25rem; z-index: 60; width: min(560px, calc(100vw - 2.5rem)); background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 12px; padding: 1.1rem 1.25rem; box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3); }
+.upgrades-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.65rem; font-size: 0.92rem; }
+.upgrades-head span { font-size: 0.8rem; color: #475569; font-weight: 600; }
+.proposal-upgrades-card ul { padding-left: 1.15rem; display: grid; gap: 0.4rem; font-size: 0.9rem; color: #334155; }

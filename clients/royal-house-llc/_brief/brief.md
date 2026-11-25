@@ -31,3 +31,15 @@ When generating the live demo site, images copied from `_brief/` to `clients/<de
     - Monday – Sunday: 9:00 AM – 8:00 PM (Every day)
     - Holidays (e.g., Thanksgiving / Black Friday): 9:00 AM – 8:00 PM (Hours might differ)
   - Form / Booking Destination: Direct call `tel:+17708955843`, consultation schedule form, and link to Facebook page.
+
+## Existing Website Revamp (`_brief/existing-site/`)
+- **Existing Website URL:** https://www.facebook.com/RoyalHouseRealtorsofGA (Social + Google Business Profile only)
+- **Saved Webpage / Screenshot Filenames (placed in `_brief/existing-site/`):** Pending (using `gmb-hours-contact.png`, `logo.jpg`, `912205289_*.jpg`, and `full_page_screenshot_to_pdf.pdf` in `_brief/`)
+- **Elements / Copy to Keep:** Official `RH` laurel crest logo, Lawrenceville office address (`2644 Sterling Dr NW`), `+1 770-895-5843`, 7-day `9 AM – 8 PM` hours, Facebook & Google Maps links.
+- **Pain Points to Fix:** No dedicated standalone website outside Facebook/Google Maps, no instant mobile buyer/seller inquiry capture, and no interactive neighborhood/service breakdown.
+- **Detected Primary / Accent Brand Colors:** `Royal Plum & Gold` (`#261a24` primary plum, `#e0bf73` warm gold, `#ead9a5` champagne)
+- **"What We Improved" (3-Bullet Follow-Up Call Talking Points):**
+  1. Built a dedicated, mobile-first luxury brokerage website replacing social-only Facebook and Google Maps links.
+  2. Added instant 7-day buyer/seller inquiry capture alongside Lawrenceville & Gwinnett landmark mapping and a 3-track Solutions panel.
+  3. Included a built-in US compliance suite (Terms, Privacy, Equal Housing notice, Cookie/Cache banner) and a live Brand-Color & Font Previewer.
+
