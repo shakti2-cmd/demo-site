@@ -1,5 +1,8 @@
 .git
+.git/**
 .gitignore
+.wrangler
+.wrangler/**
 wrangler.jsonc
 readme.txt
 */_brief
