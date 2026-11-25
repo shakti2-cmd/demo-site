@@ -169,9 +169,60 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; 2026 Whitman &amp; Sterling LLP. Starter Template Preview.</p>
-      <a href="#top">Back to top</a>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <button type="button" class="footer-pref-btn js-open-cookie-prefs">Cookie &amp; Cache Preferences</button>
+      </div>
+    </div>
+    <div class="container footer-disclaimer">
+      <p>Attorney &amp; CPA Advertising Notice: Prior results do not guarantee a similar outcome. Submitting a consultation inquiry does not establish an attorney-client or CPA-client relationship.</p>
     </div>
   </footer>
+
+  <aside id="brandCustomizerDrawer" class="customizer-drawer" aria-label="Brand color and font previewer">
+    <button id="customizerToggle" class="customizer-toggle" type="button" aria-expanded="false" aria-controls="customizerPanel">Customize Style</button>
+    <div id="customizerPanel" class="customizer-panel" hidden>
+      <div class="customizer-head">
+        <h3>Live Style Preview</h3>
+        <button id="customizerClose" class="customizer-close" type="button" aria-label="Close style previewer">&times;</button>
+      </div>
+      <p class="customizer-note">Pick a color palette &amp; font pairing to preview live:</p>
+      <div class="customizer-group">
+        <span class="customizer-label">Color Palette (<strong id="activePaletteName">Ivory, Navy &amp; Antique Gold</strong>)</span>
+        <div id="paletteList" class="swatch-list"></div>
+      </div>
+      <div class="customizer-group">
+        <span class="customizer-label">Font Pairing (<strong id="activeFontName">Editorial Serif + Clean Sans</strong>)</span>
+        <div id="fontList" class="font-list"></div>
+      </div>
+      <button id="resetStyleBtn" class="customizer-reset" type="button">Reset Default</button>
+    </div>
+  </aside>
+
+  <dialog id="demoDisclaimerModal" class="demo-modal" aria-labelledby="demoModalTitle">
+    <div class="demo-modal-box">
+      <div class="demo-modal-top">
+        <span class="proposal-badge">Custom Proposal Preview</span>
+        <button id="closeDemoModalX" class="demo-modal-x" type="button" aria-label="Close welcome notice">&times;</button>
+      </div>
+      <h2 id="demoModalTitle">Prepared Exclusively for <span class="proposal-client-name">[Client Company Name]</span></h2>
+      <p>Welcome! This interactive website draft was custom-built for <strong class="proposal-client-name">[Client Company Name]</strong> with zero commitments or obligations.</p>
+      <p>Explore the layout, test the fee FAQ accordion and consultation form, and click <strong>Customize Style</strong> on the right edge to preview different brand colors and typography live.</p>
+      <button id="exploreDemoBtn" class="btn btn-primary btn-full" type="button">Explore Demo</button>
+    </div>
+  </dialog>
+
+  <aside id="cookieConsentBanner" class="cookie-banner" role="region" aria-label="Cookie and local cache consent" hidden>
+    <div class="container cookie-inner">
+      <p>This preview uses essential browser cache and local storage to remember your style choices and privacy preferences. See our <a href="./privacy.html">Privacy Policy</a>.</p>
+      <div class="cookie-actions">
+        <button id="cookieEssentialBtn" class="cookie-btn cookie-btn-outline" type="button">Essential Cache Only</button>
+        <button id="cookieAcceptBtn" class="cookie-btn cookie-btn-solid" type="button">Accept All</button>
+      </div>
+    </div>
+  </aside>
 
   <script src="./app.js"></script>
 </body>
