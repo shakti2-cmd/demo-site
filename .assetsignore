@@ -6,6 +6,7 @@
 wrangler.jsonc
 .assetsignore
 readme.txt
+templates/_brief-template.md
 _brief
 _brief/**
 */_brief
