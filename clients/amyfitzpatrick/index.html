@@ -16,22 +16,9 @@
         <span class="proposal-text">Prepared for <strong class="proposal-client-name">Amy FitzPatrick</strong></span>
       </div>
       <div class="proposal-bar-actions">
-        <button id="proposalUpgradesBtn" class="proposal-upgrades-btn" type="button" aria-expanded="false" aria-controls="proposalUpgradesCard">What We Upgraded</button>
-        <a class="proposal-cta" href="https://calendar.app.google/Q2oPX485GmtjhGrF7" target="_blank" rel="noopener noreferrer">Approve &amp; Book Launch</a>
-        <a class="proposal-fallback" href="mailto:noeljedayala@gmail.com?subject=Amy%20FitzPatrick%20Website%20Proposal">Email Approval</a>
+        <button id="bookCallBarBtn" class="proposal-cta" type="button">Book a Call</button>
         <button id="dismissProposalBar" class="proposal-close" type="button" aria-label="Dismiss proposal preview bar">&times;</button>
       </div>
-    </div>
-    <div id="proposalUpgradesCard" class="proposal-upgrades-card" role="region" aria-label="What we upgraded summary" hidden>
-      <div class="upgrades-head">
-        <strong>Before vs. After &mdash; What We Upgraded</strong>
-        <span>amyfitzpatrick.com &rarr; Lowcountry Editorial Revamp</span>
-      </div>
-      <ul>
-        <li>Fixed the broken Property Listings page (&ldquo;This is not a valid link&rdquo;) with an interactive, filterable Charleston &amp; Lowcountry listings showcase.</li>
-        <li>Corrected the hero &ldquo;BOOK A CONSULATION&rdquo; typo and elevated the visual layout to a warm Lowcountry editorial design.</li>
-        <li>Unified all 4 Airbnb vacation rentals, 3 verified 5-star reviews, US compliance pages, and a live Brand-Color &amp; Font Previewer.</li>
-      </ul>
     </div>
   </aside>
 
@@ -404,6 +391,27 @@
       <p>Welcome! This interactive website redesign was custom-built for <strong>Amy FitzPatrick</strong> with zero commitments or obligations.</p>
       <p>Explore the new filterable Charleston listings, Airbnb stays, and client reviews, and click <strong>Customize Style</strong> on the right edge to preview different palettes and typography live.</p>
       <button id="exploreDemoBtn" class="btn btn-gold btn-full" type="button">Explore Demo</button>
+    </div>
+  </dialog>
+
+  <dialog id="calendarBookingModal" class="calendar-modal" aria-labelledby="calendarModalTitle">
+    <div class="calendar-modal-box">
+      <div class="calendar-modal-head">
+        <h2 id="calendarModalTitle">Book a Call</h2>
+        <div class="calendar-modal-actions">
+          <a class="calendar-newtab-link" href="https://calendar.app.google/Q2oPX485GmtjhGrF7" target="_blank" rel="noopener noreferrer">Open in New Tab &#8599;</a>
+          <button id="closeCalendarModalBtn" class="calendar-modal-close" type="button" aria-label="Close booking calendar">&times;</button>
+        </div>
+      </div>
+      <div class="calendar-modal-body">
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2XO7GI3LntbHEulO68_33mlqqtU74pimPQ8VeTuUrTK0xz6ShaPnKzOOGsl75nATmoC44oPDFs?gv=true"
+          title="Book a Call with Noel Ayala"
+          width="100%"
+          height="620"
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
   </dialog>
 

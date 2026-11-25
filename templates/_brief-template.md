@@ -28,7 +28,7 @@ When generating the live demo site, images copied from `_brief/` to `clients/<de
 - **Elements / Copy to Keep:** 
 - **Pain Points to Fix:** 
 - **Detected Primary / Accent Brand Colors:** (Leave blank to auto-sample dominant & accent hex colors from logo/screenshot for Preset #1)
-- **"What We Improved" (3-Bullet Follow-Up Call Talking Points):**
+- **"What We Improved" (3-Bullet Follow-Up Call Talking Points — internal reference only, not rendered in `#proposalPreviewBar`):**
   1. 
   2. 
   3. 

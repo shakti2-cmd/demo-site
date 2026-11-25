@@ -14,29 +14,20 @@
     });
   }
 
-  const upgradesBtn = document.getElementById("proposalUpgradesBtn");
-  const upgradesCard = document.getElementById("proposalUpgradesCard");
-  if (upgradesBtn && upgradesCard) {
-    function closeUpgrades() {
-      upgradesCard.hidden = true;
-      upgradesBtn.setAttribute("aria-expanded", "false");
-    }
-    upgradesBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const open = upgradesCard.hidden;
-      upgradesCard.hidden = !open;
-      upgradesBtn.setAttribute("aria-expanded", String(open));
-    });
-    document.addEventListener("click", (e) => {
-      if (!upgradesCard.hidden && !upgradesCard.contains(e.target) && !upgradesBtn.contains(e.target)) {
-        closeUpgrades();
+  const bookCallBtn = document.getElementById("bookCallBarBtn");
+  const calendarModal = document.getElementById("calendarBookingModal");
+  const closeCalendarBtn = document.getElementById("closeCalendarModalBtn");
+  if (bookCallBtn && calendarModal) {
+    bookCallBtn.addEventListener("click", () => {
+      if (typeof calendarModal.showModal === "function") {
+        calendarModal.showModal();
+      } else {
+        window.open("https://calendar.app.google/Q2oPX485GmtjhGrF7", "_blank", "noopener,noreferrer");
       }
     });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !upgradesCard.hidden) {
-        closeUpgrades();
-        upgradesBtn.focus();
-      }
+    if (closeCalendarBtn) closeCalendarBtn.addEventListener("click", () => calendarModal.close());
+    calendarModal.addEventListener("click", (e) => {
+      if (e.target === calendarModal) calendarModal.close();
     });
   }
 

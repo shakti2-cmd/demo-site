@@ -28,16 +28,9 @@ body[data-preview-mode="template"] #proposalPreviewBar, #proposalPreviewBar[hidd
 .proposal-bar-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-size: 0.9rem; }
 .proposal-badge { background: var(--seed-gold); color: #101f1c; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.25rem 0.65rem; border-radius: 999px; }
 .proposal-bar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
-.proposal-upgrades-btn, .proposal-cta, .proposal-fallback, .proposal-close { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
-.proposal-upgrades-btn { padding: 0 0.85rem; border: 1px solid var(--seed-gold-bright); background: rgba(212, 176, 111, 0.14); color: var(--seed-gold-bright); }
-.proposal-cta { background: var(--seed-gold-bright); color: #101f1c; padding: 0 1rem; }
-.proposal-fallback { color: #f1f5f9; padding: 0 0.8rem; border: 1px solid #48605b; }
+.proposal-cta, .proposal-close { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
+.proposal-cta { background: var(--seed-gold-bright); color: #101f1c; padding: 0 1rem; border: none; }
 .proposal-close { min-width: 44px; background: transparent; color: #f8fafc; border: 1px solid #48605b; font-size: 1.35rem; }
-.proposal-upgrades-card[hidden] { display: none; }
-.proposal-upgrades-card { position: absolute; top: calc(100% + 6px); right: 1.25rem; z-index: 60; width: min(560px, calc(100vw - 2.5rem)); background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 12px; padding: 1.1rem 1.25rem; box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28); }
-.upgrades-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.65rem; font-size: 0.92rem; }
-.upgrades-head span { font-size: 0.8rem; color: #475569; font-weight: 600; }
-.proposal-upgrades-card ul { padding-left: 1.15rem; display: grid; gap: 0.4rem; font-size: 0.9rem; color: #334155; }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 40; background: rgba(250, 247, 242, 0.96); border-bottom: 1px solid var(--seed-border); backdrop-filter: blur(8px); }
@@ -190,6 +183,17 @@ body[data-preview-mode="template"] #proposalPreviewBar, #proposalPreviewBar[hidd
 .demo-modal-top { display: flex; align-items: center; justify-content: space-between; }
 .demo-modal-x { min-width: 44px; min-height: 44px; border: 1px solid #cbd5e1; background: #f8fafc; border-radius: 8px; font-size: 1.35rem; cursor: pointer; }
 .demo-modal-box p { font-size: 0.94rem; color: #334155; }
+
+.calendar-modal { margin: auto; border: none; border-radius: 14px; padding: 0; width: min(860px, 94vw); max-height: 92vh; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); overflow: hidden; }
+.calendar-modal::backdrop { background: rgba(16, 31, 28, 0.72); }
+.calendar-modal-box { background: #ffffff; color: #0f172a; display: flex; flex-direction: column; }
+.calendar-modal-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.85rem 1.15rem; background: var(--seed-pine-dark); color: #ffffff; border-bottom: 2px solid var(--seed-gold); }
+.calendar-modal-head h2 { font-size: 1.2rem; color: #ffffff; }
+.calendar-modal-actions { display: flex; align-items: center; gap: 0.55rem; }
+.calendar-newtab-link { min-height: 44px; padding: 0 0.85rem; display: inline-flex; align-items: center; border-radius: 8px; border: 1px solid rgba(212, 176, 111, 0.55); color: var(--seed-gold-bright); font-size: 0.84rem; font-weight: 700; text-decoration: none; }
+.calendar-modal-close { min-width: 44px; min-height: 44px; border: 1px solid rgba(255, 255, 255, 0.35); background: transparent; color: #ffffff; border-radius: 8px; font-size: 1.35rem; cursor: pointer; }
+.calendar-modal-body { background: #ffffff; }
+.calendar-modal-body iframe { display: block; border: 0; width: 100%; height: min(620px, 72vh); background: #ffffff; }
 
 .cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; background: #101f1c; color: #f8fafc; border-top: 2px solid var(--seed-gold); padding: 0.85rem 0; }
 .cookie-banner[hidden] { display: none; }

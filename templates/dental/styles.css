@@ -86,7 +86,7 @@ body[data-preview-mode="template"] #proposalPreviewBar,
   gap: 0.6rem;
 }
 
-.proposal-cta, .proposal-fallback, .proposal-close {
+.proposal-cta, .proposal-close {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -95,18 +95,14 @@ body[data-preview-mode="template"] #proposalPreviewBar,
   font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .proposal-cta {
   background: #14b8a6;
   color: #042f2e;
   padding: 0 1rem;
-}
-
-.proposal-fallback {
-  color: #e2e8f0;
-  padding: 0 0.75rem;
-  border: 1px solid #475569;
+  border: none;
 }
 
 .proposal-close {
@@ -115,7 +111,6 @@ body[data-preview-mode="template"] #proposalPreviewBar,
   color: #f8fafc;
   border: 1px solid #475569;
   font-size: 1.35rem;
-  cursor: pointer;
 }
 
 /* Header & Navigation */
@@ -656,9 +651,13 @@ h1 {
 .legal-card p, .legal-card li { color: var(--muted); }
 .legal-card ul { padding-left: 1.25rem; display: grid; gap: 0.4rem; }
 
-.proposal-upgrades-btn { min-height: 44px; padding: 0 0.85rem; border-radius: 8px; border: 1px solid #5eead4; background: rgba(20, 184, 166, 0.14); color: #5eead4; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
-.proposal-upgrades-btn[hidden], .proposal-upgrades-card[hidden] { display: none; }
-.proposal-upgrades-card { position: absolute; top: calc(100% + 6px); right: 1.25rem; z-index: 60; width: min(560px, calc(100vw - 2.5rem)); background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 12px; padding: 1.1rem 1.25rem; box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3); }
-.upgrades-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.65rem; font-size: 0.92rem; }
-.upgrades-head span { font-size: 0.8rem; color: #475569; font-weight: 600; }
-.proposal-upgrades-card ul { padding-left: 1.15rem; display: grid; gap: 0.4rem; font-size: 0.9rem; color: #334155; }
+.calendar-modal { margin: auto; border: none; border-radius: 14px; padding: 0; width: min(860px, 94vw); max-height: 92vh; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); overflow: hidden; }
+.calendar-modal::backdrop { background: rgba(15, 23, 42, 0.68); }
+.calendar-modal-box { background: #ffffff; color: #0f172a; display: flex; flex-direction: column; }
+.calendar-modal-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.85rem 1.15rem; background: #0f172a; color: #ffffff; border-bottom: 2px solid #14b8a6; }
+.calendar-modal-head h2 { font-size: 1.2rem; color: #ffffff; }
+.calendar-modal-actions { display: flex; align-items: center; gap: 0.55rem; }
+.calendar-newtab-link { min-height: 44px; padding: 0 0.85rem; display: inline-flex; align-items: center; border-radius: 8px; border: 1px solid #5eead4; color: #5eead4; font-size: 0.84rem; font-weight: 700; text-decoration: none; }
+.calendar-modal-close { min-width: 44px; min-height: 44px; border: 1px solid rgba(255, 255, 255, 0.35); background: transparent; color: #ffffff; border-radius: 8px; font-size: 1.35rem; cursor: pointer; }
+.calendar-modal-body { background: #ffffff; }
+.calendar-modal-body iframe { display: block; border: 0; width: 100%; height: min(620px, 72vh); background: #ffffff; }
