@@ -43,3 +43,8 @@ When generating the live demo site, images copied from `_brief/` to `clients/<de
   2. Added instant 7-day buyer/seller inquiry capture alongside Lawrenceville & Gwinnett landmark mapping and a 3-track Solutions panel.
   3. Included a built-in US compliance suite (Terms, Privacy, Equal Housing notice, Cookie/Cache banner) and a live Brand-Color & Font Previewer.
 
+
+## Inspiration References (`_brief/inspiration/`)
+- **Inspiration Website URLs:** 
+- **Saved Inspiration Sites / Screenshots (placed in `_brief/inspiration/`):** (`.png`, `.jpg`, `.pdf`, Save Page As `.html` + `*_files/`, or `.zip`)
+- **Specific Layout / Visual Elements to Emulate:** (hero layout, typography style, section rhythm, CTA flow)

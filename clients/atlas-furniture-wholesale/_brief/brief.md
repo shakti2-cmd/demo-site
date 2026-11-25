@@ -19,3 +19,8 @@ Copy this file into `_websites/00_demo-sites/clients/<demo-client>/_brief/brief.
   - Location / Service Area: 
   - Business Hours: 
   - Form / Booking Destination: 
+
+## Inspiration References (`_brief/inspiration/`)
+- **Inspiration Website URLs:** 
+- **Saved Inspiration Sites / Screenshots (placed in `_brief/inspiration/`):** (`.png`, `.jpg`, `.pdf`, Save Page As `.html` + `*_files/`, or `.zip`)
+- **Specific Layout / Visual Elements to Emulate:** (hero layout, typography style, section rhythm, CTA flow)

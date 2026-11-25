@@ -38,3 +38,8 @@ When generating the live demo site, images copied from `_brief/` to `clients/<de
   1. 
   2. 
   3. 
+
+## Inspiration References (`_brief/inspiration/`)
+- **Inspiration Website URLs:** 
+- **Saved Inspiration Sites / Screenshots (placed in `_brief/inspiration/`):** (`.png`, `.jpg`, `.pdf`, Save Page As `.html` + `*_files/`, or `.zip`)
+- **Specific Layout / Visual Elements to Emulate:** (hero layout, typography style, section rhythm, CTA flow)
