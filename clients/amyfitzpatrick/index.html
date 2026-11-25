@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Amy FitzPatrick &mdash; Charleston Real Estate Agent &amp; Investor</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-preview-mode="client">
+  <aside id="proposalPreviewBar" class="proposal-bar" role="region" aria-label="Proposal preview controls">
+    <div class="container proposal-bar-inner">
+      <div class="proposal-bar-meta">
+        <span class="proposal-badge">Custom Revamp Draft</span>
+        <span class="proposal-text">Prepared for <strong class="proposal-client-name">Amy FitzPatrick</strong></span>
+      </div>
+      <div class="proposal-bar-actions">
+        <button id="proposalUpgradesBtn" class="proposal-upgrades-btn" type="button" aria-expanded="false" aria-controls="proposalUpgradesCard">What We Upgraded</button>
+        <a class="proposal-cta" href="https://calendar.app.google/Q2oPX485GmtjhGrF7" target="_blank" rel="noopener noreferrer">Approve &amp; Book Launch</a>
+        <a class="proposal-fallback" href="mailto:noeljedayala@gmail.com?subject=Amy%20FitzPatrick%20Website%20Proposal">Email Approval</a>
+        <button id="dismissProposalBar" class="proposal-close" type="button" aria-label="Dismiss proposal preview bar">&times;</button>
+      </div>
+    </div>
+    <div id="proposalUpgradesCard" class="proposal-upgrades-card" role="region" aria-label="What we upgraded summary" hidden>
+      <div class="upgrades-head">
+        <strong>Before vs. After &mdash; What We Upgraded</strong>
+        <span>amyfitzpatrick.com &rarr; Lowcountry Editorial Revamp</span>
+      </div>
+      <ul>
+        <li>Fixed the broken Property Listings page (&ldquo;This is not a valid link&rdquo;) with an interactive, filterable Charleston &amp; Lowcountry listings showcase.</li>
+        <li>Corrected the hero &ldquo;BOOK A CONSULATION&rdquo; typo and elevated the visual layout to a warm Lowcountry editorial design.</li>
+        <li>Unified all 4 Airbnb vacation rentals, 3 verified 5-star reviews, US compliance pages, and a live Brand-Color &amp; Font Previewer.</li>
+      </ul>
+    </div>
+  </aside>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">
+        <img src="./assets/amy-logo.webp" alt="Amy FitzPatrick Real Estate Agent" class="brand-logo" width="128" height="72" />
+      </a>
+      <button id="mobileMenuBtn" class="menu-toggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">Menu</button>
+      <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#listings">Listings</a>
+        <a href="#airbnb">Airbnb</a>
+        <a href="#reviews">Reviews</a>
+        <a class="btn btn-outline-gold" href="#contact">Let&rsquo;s Talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="./assets/charleston-oak.webp" alt="" width="1440" height="960" fetchpriority="high" />
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">CHARLESTON, SOUTH CAROLINA</p>
+        <h1>Buy, Sell, or Invest in Charleston.</h1>
+        <p class="hero-lead">
+          Local expertise, personalized guidance, and a deep love for the Lowcountry&mdash;backed by 15+ years of renovating, staging, and investing in Charleston real estate.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#listings">Explore Listings &rarr;</a>
+          <a class="btn btn-ghost" href="#about">Meet Amy</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container search-bar-wrap">
+      <form id="propertyFilterForm" class="search-bar" aria-label="Filter Charleston properties">
+        <div class="search-field">
+          <label for="filterGoal">I&rsquo;m Looking To</label>
+          <select id="filterGoal" name="goal">
+            <option value="all">Buy, Sell, or Invest</option>
+            <option value="buy">Buy a Home</option>
+            <option value="sell">Sell a Home</option>
+            <option value="invest">Invest / Airbnb</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="filterLocation">Location</label>
+          <select id="filterLocation" name="location">
+            <option value="all">All Charleston Areas</option>
+            <option value="charleston">Charleston, SC</option>
+            <option value="mount-pleasant">Mount Pleasant, SC</option>
+            <option value="james-island">James Island, SC</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="filterType">Property Type</label>
+          <select id="filterType" name="type">
+            <option value="all">All Property Types</option>
+            <option value="residential">Single-Family Residence</option>
+            <option value="waterfront">Waterfront &amp; Marsh View</option>
+            <option value="renovated">Renovated &amp; Turnkey</option>
+          </select>
+        </div>
+        <button class="btn btn-navy search-submit" type="submit">Search Homes</button>
+      </form>
+    </div>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <img src="./assets/amy-portrait.webp" alt="Amy FitzPatrick on a classic Charleston porch" width="900" height="900" loading="lazy" />
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow eyebrow-gold">MEET AMY</p>
+          <h2>Real estate is personal. So is my approach.</h2>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p>
+            Hi, I&rsquo;m Amy, a Charleston-based real estate professional, investor, and entrepreneur with a passion for creating spaces that work just as beautifully as they live. Over the past 15+ years, I&rsquo;ve renovated, staged, and managed dozens of homes&mdash;from personal residences to high-performing rental properties.
+          </p>
+          <p>
+            Whether I&rsquo;m helping a family relocate from across the country, guiding a first-time buyer, or advising on a renovation and contractor team, I approach every project with clarity and care. I&rsquo;m also honored to serve as <strong>Treasurer of the Charleston Top Producers Club</strong>.
+          </p>
+          <a class="btn btn-outline-gold" href="#contact">Schedule a Consultation &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="listings" class="section section-alt">
+      <div class="container">
+        <div class="center-head">
+          <p class="section-kicker"><span>FEATURED PROPERTIES</span></p>
+          <h2>Explore Charleston Listings</h2>
+          <p id="filterSummary" class="filter-summary">Showing all curated Charleston &amp; Lowcountry residences.</p>
+        </div>
+
+        <div id="listingsGrid" class="listings-grid">
+          <article class="listing-card" data-location="charleston" data-type="residential">
+            <div class="listing-media">
+              <img src="./assets/amy-charleston.webp" alt="Historic Charleston residence along palm-lined street" width="960" height="960" loading="lazy" />
+              <span class="status-pill">FOR SALE</span>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <h3>Historic Charleston Residence</h3>
+                <button class="fav-btn" type="button" aria-pressed="false" aria-label="Save Historic Charleston Residence">&#9825;</button>
+              </div>
+              <p class="listing-loc">Downtown Charleston, SC</p>
+              <p class="listing-meta">4 Beds &bull; 3.5 Baths &bull; Classic Lowcountry Piazza</p>
+              <a class="listing-cta" href="#contact">Inquire About Listing &rarr;</a>
+            </div>
+          </article>
+
+          <article class="listing-card" data-location="james-island" data-type="waterfront">
+            <div class="listing-media">
+              <img src="./assets/charleston-oak.webp" alt="Waterfront marsh view retreat under live oaks" width="960" height="640" loading="lazy" />
+              <span class="status-pill">FEATURED</span>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <h3>Waterfront Marsh Retreat</h3>
+                <button class="fav-btn" type="button" aria-pressed="false" aria-label="Save Waterfront Marsh Retreat">&#9825;</button>
+              </div>
+              <p class="listing-loc">James Island, SC</p>
+              <p class="listing-meta">4 Beds &bull; 3 Baths &bull; Deep-Water &amp; Sunset Views</p>
+              <a class="listing-cta" href="#contact">Inquire About Listing &rarr;</a>
+            </div>
+          </article>
+
+          <article class="listing-card" data-location="mount-pleasant" data-type="renovated">
+            <div class="listing-media">
+              <img src="./assets/charleston-harbor.webp" alt="Charleston Harbor and Mount Pleasant coastal corridor" width="960" height="640" loading="lazy" />
+              <span class="status-pill">NEW LISTING</span>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <h3>Lowcountry Turnkey Renovation</h3>
+                <button class="fav-btn" type="button" aria-pressed="false" aria-label="Save Lowcountry Turnkey Renovation">&#9825;</button>
+              </div>
+              <p class="listing-loc">Mount Pleasant, SC</p>
+              <p class="listing-meta">3 Beds &bull; 2.5 Baths &bull; Minutes to Ravenel Bridge</p>
+              <a class="listing-cta" href="#contact">Inquire About Listing &rarr;</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-cta">
+          <a class="btn btn-outline-gold" href="#contact">Request Custom MLS Alerts &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-coastal">
+      <div class="container">
+        <div class="center-head">
+          <p class="section-kicker"><span>HOW I CAN HELP</span></p>
+          <h2>Your Charleston Real Estate Partner</h2>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <path d="M7 19L20 8l13 11v13H24v-8h-8v8H7V19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+            <h3>Buy a Home</h3>
+            <p>From out-of-state relocations to local upgrades, find the right school district, street, and neighborhood with confidence.</p>
+          </article>
+
+          <article class="pillar-card">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <path d="M21 7l12 12-12 12L9 19V7h12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="15" cy="13" r="2" fill="currentColor"/>
+            </svg>
+            <h3>Sell Your Home</h3>
+            <p>Design-minded staging, renovation ROI guidance, and strategic pricing engineered to command top market value.</p>
+          </article>
+
+          <article class="pillar-card">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <rect x="8" y="22" width="5" height="10" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="17.5" y="16" width="5" height="16" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="27" y="10" width="5" height="22" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            <h3>Invest in Charleston</h3>
+            <p>Identify high-performing rental properties, coordinate trusted contractors, and build long-term coastal wealth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="airbnb" class="section">
+      <div class="container">
+        <div class="airbnb-intro">
+          <div class="airbnb-photo">
+            <img src="./assets/amy-charleston.webp" alt="Amy FitzPatrick exploring historic Charleston neighborhoods" width="960" height="960" loading="lazy" />
+          </div>
+          <div>
+            <p class="eyebrow eyebrow-gold">AIRBNB &amp; INVESTMENTS</p>
+            <h2>Short-Term Stays &amp; Investment Properties</h2>
+            <p>
+              Curious about Airbnb or coastal investment opportunities? I help clients find, evaluate, furnish, and manage properties that perform&mdash;plus host four signature coastal and Charleston getaways.
+            </p>
+            <a class="btn btn-outline-gold" href="#contact">Ask About Stays &amp; ROI &rarr;</a>
+          </div>
+        </div>
+
+        <div class="stays-grid">
+          <article class="stay-card">
+            <span class="stay-loc">Emerald Isle, NC</span>
+            <h3>Carolina House</h3>
+            <p>Entire home with 6 bedrooms, 4 baths, two full kitchens, and two spacious living &amp; dining areas for large group getaways.</p>
+            <a href="#contact">Check Availability &rarr;</a>
+          </article>
+
+          <article class="stay-card">
+            <span class="stay-loc">Emerald Isle, NC</span>
+            <h3>Carolina North Side</h3>
+            <p>Bright coastal duplex (3 bedrooms, 2 baths, full kitchen, sleeps 8) steps from Emerald Isle beaches.</p>
+            <a href="#contact">Check Availability &rarr;</a>
+          </article>
+
+          <article class="stay-card">
+            <span class="stay-loc">Emerald Isle, NC</span>
+            <h3>Carolina South Side</h3>
+            <p>Oceanside half of the duplex featuring 3 bedrooms, 4 beds, 2 full baths, and relaxed coastal living for up to 8 guests.</p>
+            <a href="#contact">Check Availability &rarr;</a>
+          </article>
+
+          <article class="stay-card">
+            <span class="stay-loc">Charleston, SC</span>
+            <h3>Charleston, SC House</h3>
+            <p>Entire 4-bedroom, 4-full-bath residence sleeping 8 guests&mdash;ideal for Lowcountry retreats and family gatherings.</p>
+            <a href="#contact">Check Availability &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section section-alt">
+      <div class="container">
+        <div class="center-head">
+          <p class="section-kicker"><span>CLIENT TESTIMONIALS</span></p>
+          <h2>What Our Clients Are Saying</h2>
+        </div>
+
+        <div class="review-carousel">
+          <button id="reviewPrev" class="circle-arrow" type="button" aria-label="Previous testimonial">&larr;</button>
+          <div class="review-stage" aria-live="polite">
+            <blockquote id="reviewQuote" class="review-quote"></blockquote>
+            <p id="reviewAuthor" class="review-author"></p>
+          </div>
+          <button id="reviewNext" class="circle-arrow" type="button" aria-label="Next testimonial">&rarr;</button>
+        </div>
+
+        <div class="review-dots" role="tablist" aria-label="Testimonial slides">
+          <button class="rev-dot is-active" type="button" data-rev="0" aria-label="Testimonial 1"></button>
+          <button class="rev-dot" type="button" data-rev="1" aria-label="Testimonial 2"></button>
+          <button class="rev-dot" type="button" data-rev="2" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-banner">
+      <div class="contact-media" aria-hidden="true">
+        <img src="./assets/charleston-harbor.webp" alt="" width="1440" height="960" loading="lazy" />
+      </div>
+      <div class="contact-scrim" aria-hidden="true"></div>
+
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <h2>Let&rsquo;s Talk Real Estate</h2>
+          <p>Have questions about buying, selling, relocating, or investing in Charleston? Send a quick note and I&rsquo;ll follow up personally.</p>
+          <div class="contact-details">
+            <a href="tel:+18438139505">(843) 813-9505</a>
+            <a href="mailto:Amy@AmyFitzPatrick.com">Amy@AmyFitzPatrick.com</a>
+            <a href="mailto:afitzpatrickrealestate@gmail.com">afitzpatrickrealestate@gmail.com</a>
+            <span>806 Johnnie Dodds, Charleston, SC 29464</span>
+          </div>
+        </div>
+
+        <form id="consultForm" class="consult-card" novalidate>
+          <h3>Send a Message</h3>
+          <div class="form-row-2">
+            <div class="field">
+              <label for="cName">Your Name</label>
+              <input id="cName" name="name" type="text" required placeholder="Sarah M." />
+            </div>
+            <div class="field">
+              <label for="cPhone">Phone or Email</label>
+              <input id="cPhone" name="contact" type="text" required placeholder="(843) 555-0148" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="cInterest">How Can Amy Help?</label>
+            <select id="cInterest" name="interest">
+              <option value="Buying in Charleston">Buying a Home in Charleston</option>
+              <option value="Selling / Home Valuation">Selling / Home Valuation</option>
+              <option value="Investment / Renovation Advisory">Investment / Renovation Advisory</option>
+              <option value="Airbnb / Short-Term Stay">Airbnb / Short-Term Stay</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cMsg">Notes &amp; Timeline</label>
+            <textarea id="cMsg" name="message" rows="2" placeholder="Target neighborhood, move-in date, or property questions"></textarea>
+          </div>
+          <button class="btn btn-gold btn-full" type="submit">Send Message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Amy FitzPatrick &mdash; Charleston Real Estate Agent</strong>
+        <p>806 Johnnie Dodds, Charleston, SC 29464 &bull; +1 843-813-9505 &bull; Treasurer, Charleston Top Producers Club</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/amyfitzpatrickrealtor" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/in/amy-fitzpatrick-0838497/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/amyfitzpatrickrealestate/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <button type="button" class="footer-pref-btn js-open-cookie-prefs">Cookie &amp; Cache Preferences</button>
+      </div>
+    </div>
+    <div class="container footer-disclaimer">
+      <p>Equal Housing Opportunity. All South Carolina real estate listings, pricing estimates, and Airbnb availability details are subject to independent verification prior to contract execution.</p>
+    </div>
+  </footer>
+
+  <aside id="brandCustomizerDrawer" class="customizer-drawer" aria-label="Brand color and font previewer">
+    <button id="customizerToggle" class="customizer-toggle" type="button" aria-expanded="false" aria-controls="customizerPanel">Customize Style</button>
+    <div id="customizerPanel" class="customizer-panel" hidden>
+      <div class="customizer-head">
+        <h3>Live Style Preview</h3>
+        <button id="customizerClose" class="customizer-close" type="button" aria-label="Close style previewer">&times;</button>
+      </div>
+      <p class="customizer-note">Pick a color palette &amp; font pairing to preview live:</p>
+      <div class="customizer-group">
+        <span class="customizer-label">Color Palette (<strong id="activePaletteName">Amy FitzPatrick Lowcountry</strong>)</span>
+        <div id="paletteList" class="swatch-list"></div>
+      </div>
+      <div class="customizer-group">
+        <span class="customizer-label">Font Pairing (<strong id="activeFontName">Editorial Serif + Clean Sans</strong>)</span>
+        <div id="fontList" class="font-list"></div>
+      </div>
+      <button id="resetStyleBtn" class="customizer-reset" type="button">Reset Default</button>
+    </div>
+  </aside>
+
+  <dialog id="demoDisclaimerModal" class="demo-modal" aria-labelledby="demoModalTitle">
+    <div class="demo-modal-box">
+      <div class="demo-modal-top">
+        <span class="proposal-badge">Custom Revamp Preview</span>
+        <button id="closeDemoModalX" class="demo-modal-x" type="button" aria-label="Close welcome notice">&times;</button>
+      </div>
+      <h2 id="demoModalTitle">Prepared Exclusively for Amy FitzPatrick</h2>
+      <p>Welcome! This interactive website redesign was custom-built for <strong>Amy FitzPatrick</strong> with zero commitments or obligations.</p>
+      <p>Explore the new filterable Charleston listings, Airbnb stays, and client reviews, and click <strong>Customize Style</strong> on the right edge to preview different palettes and typography live.</p>
+      <button id="exploreDemoBtn" class="btn btn-gold btn-full" type="button">Explore Demo</button>
+    </div>
+  </dialog>
+
+  <aside id="cookieConsentBanner" class="cookie-banner" role="region" aria-label="Cookie and local cache consent" hidden>
+    <div class="container cookie-inner">
+      <p>This preview uses essential browser cache and local storage to remember your style choices and privacy preferences. See our <a href="./privacy.html">Privacy Policy</a>.</p>
+      <div class="cookie-actions">
+        <button id="cookieEssentialBtn" class="cookie-btn cookie-btn-outline" type="button">Essential Cache Only</button>
+        <button id="cookieAcceptBtn" class="cookie-btn cookie-btn-solid" type="button">Accept All</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="./app.js"></script>
+</body>
+</html>
