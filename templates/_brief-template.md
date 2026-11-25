@@ -1,9 +1,9 @@
 # Client Demo Brief (2-Minute Cold-Call Intake)
 
-Copy this file into `_websites/00_demo-sites/<demo-client>/_brief/brief.md` before building a client demo.
+Copy this file into `_websites/00_demo-sites/clients/<demo-client>/_brief/brief.md` before building a client demo.
 
 - **Business Name:** 
-- **Target Subfolder Slug:** (e.g., `acme-dental` -> `/acme-dental/`)
+- **Target Subfolder Slug:** (e.g., `clients/acme-dental` -> `/clients/acme-dental/`)
 - **Selected Industry Template:** `dental` | `home-services` | `law-accounting`
 - **Core Offer & Key Services:** 
   - Primary offer / headline hook: 
