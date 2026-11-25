@@ -4,6 +4,7 @@
 .wrangler
 .wrangler/**
 wrangler.jsonc
+.assetsignore
 readme.txt
 _brief
 _brief/**
