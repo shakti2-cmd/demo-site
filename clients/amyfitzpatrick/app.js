@@ -121,9 +121,37 @@
   }
 
   renderReview(0);
-  if (revPrev) revPrev.addEventListener("click", () => renderReview(activeRev - 1));
-  if (revNext) revNext.addEventListener("click", () => renderReview(activeRev + 1));
-  revDots.forEach((dot) => dot.addEventListener("click", () => renderReview(Number(dot.dataset.rev || 0))));
+  let reviewTimer = null;
+  const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function startReviewAutoplay() {
+    if (prefersReducedMotion || reviewTimer) return;
+    reviewTimer = setInterval(() => renderReview(activeRev + 1), 5500);
+  }
+
+  function stopReviewAutoplay() {
+    if (!reviewTimer) return;
+    clearInterval(reviewTimer);
+    reviewTimer = null;
+  }
+
+  function resetReviewAutoplay() {
+    stopReviewAutoplay();
+    startReviewAutoplay();
+  }
+
+  if (revPrev) revPrev.addEventListener("click", () => { renderReview(activeRev - 1); resetReviewAutoplay(); });
+  if (revNext) revNext.addEventListener("click", () => { renderReview(activeRev + 1); resetReviewAutoplay(); });
+  revDots.forEach((dot) => dot.addEventListener("click", () => { renderReview(Number(dot.dataset.rev || 0)); resetReviewAutoplay(); }));
+
+  const reviewsSection = document.getElementById("reviews");
+  if (reviewsSection) {
+    reviewsSection.addEventListener("mouseenter", stopReviewAutoplay);
+    reviewsSection.addEventListener("mouseleave", startReviewAutoplay);
+    reviewsSection.addEventListener("focusin", stopReviewAutoplay);
+    reviewsSection.addEventListener("focusout", startReviewAutoplay);
+  }
+  startReviewAutoplay();
 
   // Consultation Form
   const consultForm = document.getElementById("consultForm");
