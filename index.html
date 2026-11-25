@@ -1,316 +1,498 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-site-id="webdev" data-default-theme="dark" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Noel Ayala &mdash; Web Engineering, Edge Systems &amp; Live Demo Showcase</title>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Noel Ayala — Web Developer, E-Commerce & Cloudflare Edge Architect</title>
+  <meta name="description" content="Web Development & Technical Architecture Portfolio of Noel Ayala: Static & Edge Web Apps, React/TypeScript, Shopify/WordPress Optimization, and Cloudflare Workers CI/CD." />
+  <link rel="canonical" href="https://demo-site.noeljedayala.workers.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Noel Ayala — Web Developer, E-Commerce & Cloudflare Edge Architect" />
+  <meta property="og:description" content="Web Development & Technical Architecture Portfolio of Noel Ayala: Static & Edge Web Apps, React/TypeScript, Shopify/WordPress Optimization, and Cloudflare Workers CI/CD." />
+  <meta property="og:url" content="https://demo-site.noeljedayala.workers.dev/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="eco-bar" aria-label="Noel Ayala Specialty Portfolios">
-    <div class="container eco-inner">
+  <!-- SPECIALTY ECOSYSTEM SWITCHER -->
+  <div class="eco-bar" role="navigation" aria-label="Noel Ayala Specialty Portfolios">
+    <div class="eco-bar-inner">
       <span class="eco-label">Noel Ayala Portfolios //</span>
       <div class="eco-links">
-        <a href="https://resume.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">resume</a>
-        <a href="https://graphic.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">graphic</a>
-        <a href="https://webdev.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">webdev</a>
-        <a href="https://automation.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">automation</a>
-        <a href="https://socmed.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">socmed</a>
-        <a href="https://assistance.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">assistance</a>
-        <a href="https://digitalop.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">digitalop</a>
+        <a href="https://resume.noeljedayala.workers.dev/" class="eco-link">Main Resume</a>
+          <a href="https://graphic.noeljedayala.workers.dev/" class="eco-link">Graphic Design</a>
+          <a href="https://webdev.noeljedayala.workers.dev/" class="eco-link is-active" aria-current="page">Web Development</a>
+          <a href="https://automation.noeljedayala.workers.dev/" class="eco-link">AI & Automation</a>
+          <a href="https://socmed.noeljedayala.workers.dev/" class="eco-link">Social Media</a>
+          <a href="https://assistance.noeljedayala.workers.dev/" class="eco-link">Executive VA</a>
+          <a href="https://digitalop.noeljedayala.workers.dev/" class="eco-link">Digital Ops</a>
       </div>
     </div>
-  </nav>
+  </div>
 
+  <!-- STICKY HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top">
-        <span class="brand-mark" aria-hidden="true">NA</span>
-        <span class="brand-copy">
-          <strong>Noel Ayala</strong>
-          <small>Web Engineering &amp; Edge Systems</small>
+      <a href="#top" class="brand">
+        <span class="brand-mark">NA</span>
+        <span>
+          Noel Ayala
+          <span class="brand-sub">Web Engineering & Edge Systems</span>
         </span>
       </a>
 
-      <nav id="primaryNav" class="nav-links" aria-label="Primary navigation">
-        <a href="#templates">Templates</a>
-        <a href="#work">Work &amp; Audits</a>
-        <a href="#stack">About &amp; Stack</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
+      <nav id="nav-menu" class="nav-menu" aria-label="Primary Navigation">
+        <a href="#templates" class="nav-link">Templates</a>
+        <a href="#case-studies" class="nav-link">Case Studies</a>
+            <a href="#edge-topology" class="nav-link">Edge Topology</a>
+            <a href="#testimonials" class="nav-link">Client Reviews</a>
+            <a href="#contact" class="nav-link">Book Technical Call</a>
       </nav>
 
       <div class="header-actions">
-        <button id="themeToggle" class="btn btn-outline btn-sm" type="button" aria-pressed="false">Dark Mode</button>
-        <a class="btn btn-primary btn-sm" href="#contact">Book a Call</a>
-        <button id="mobileMenuBtn" class="menu-toggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">Menu</button>
+        <button type="button" id="theme-toggle" class="btn btn-secondary btn-sm">
+          <span class="theme-label">Toggle Theme</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire / Book Call</a>
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu">
+          Menu
+        </button>
       </div>
     </div>
   </header>
 
   <main id="top">
+
+    <!-- HERO: EMBER TERMINAL DARK ENGINEERING -->
     <section class="hero">
-      <div class="container hero-layout">
-        <div class="hero-main">
-          <p class="mono-pill">TAGUM CITY, DAVAO REGION, PH &bull; UTC+8 (US / AU / EU OVERLAP)</p>
-          <h1>Noel Ayala &mdash; Web Developer, E-Commerce &amp; Cloudflare Edge Architect.</h1>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">EDGE ARCHITECTURE &amp; FULL-STACK WEB ENGINEERING // EMBER</span>
+          <h1 class="hero-title">Zero-Bloat Web Systems, E-Commerce Storefronts &amp; Cloudflare Edge Deploys.</h1>
           <p class="hero-lead">
-            Building fast, zero-bloat websites, high-converting Shopify &amp; WordPress storefronts, and full-stack React/TypeScript web systems backed by 10+ years of commercial execution and Cloudflare edge architecture.
+            Web Developer &amp; Technical Systems Architect combining <strong>clean HTML5/CSS3/JS, React, TypeScript, Python/FastAPI, and Rust/Tauri</strong> with 10+ years of commercial e-commerce and CMS execution across <strong>Cloudflare Workers, Shopify, WordPress, and WooCommerce</strong>.
           </p>
           <div class="hero-cta-row">
-            <a class="btn btn-primary" href="#templates">Explore Live Templates &darr;</a>
-            <a class="btn btn-outline" href="#contact">Book Discovery Call</a>
-            <a class="btn btn-ghost" href="https://github.com/shakti2-cmd" target="_blank" rel="noopener noreferrer">GitHub (@shakti2-cmd) &#8599;</a>
+            <a href="#case-studies" class="btn btn-primary">Inspect Technical Audits &amp; Builds ↓</a>
+            <a href="#edge-topology" class="btn btn-secondary">View 7-Node Cloudflare Topology</a>
+            <a href="https://github.com/shakti2-cmd" target="_blank" rel="noopener" class="btn btn-secondary">GitHub (@shakti2-cmd) ↗</a>
+          </div>
+          <div class="kpi-strip">
+            <div class="kpi-item">
+              <span class="kpi-num">7 Nodes</span>
+              <span class="kpi-label">Live Cloudflare Workers Subdomains</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-num">&lt;15ms</span>
+              <span class="kpi-label">Global Edge TTFB &amp; Immutable Cache</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-num">$0/mo</span>
+              <span class="kpi-label">Free-Tier Edge Infrastructure Overhead</span>
+            </div>
           </div>
         </div>
 
-        <div class="kpi-grid" aria-label="Engineering metrics">
-          <div class="kpi-card">
-            <strong>7+</strong>
-            <span>Live Edge Nodes</span>
+        <div class="feature-card" style="font-family:var(--font-mono);background:#090A0F;color:#E5E7EB;border-color:#F59E0B;">
+          <div style="padding:12px 18px;background:#14161F;border-bottom:1px solid #2D323E;display:flex;justify-content:space-between;align-items:center;">
+            <span style="color:#FBBF24;font-size:0.8rem;font-weight:700;">terminal // console.bat → github → cloudflare-edge</span>
+            <span style="color:#10B981;font-size:0.75rem;">● 7/7 WORKERS ACTIVE</span>
           </div>
-          <div class="kpi-card">
-            <strong>&lt;15ms</strong>
-            <span>Global Edge TTFB</span>
-          </div>
-          <div class="kpi-card">
-            <strong>$0/mo</strong>
-            <span>Edge Overhead</span>
+          <div style="padding:22px;font-size:0.82rem;line-height:1.65;">
+            <div style="color:#9CA3AF;">$ ./console.bat --verify-deployments</div>
+            <div style="color:#10B981;margin-top:6px;">[OK] resume.noeljedayala.workers.dev     (200 OK · TLS 1.3)</div>
+            <div style="color:#10B981;">[OK] graphic.noeljedayala.workers.dev    (200 OK · TLS 1.3)</div>
+            <div style="color:#FBBF24;font-weight:700;">[OK] webdev.noeljedayala.workers.dev     (ACTIVE NODE)</div>
+            <div style="color:#10B981;">[OK] automation.noeljedayala.workers.dev (200 OK · TLS 1.3)</div>
+            <div style="color:#10B981;">[OK] socmed.noeljedayala.workers.dev     (200 OK · TLS 1.3)</div>
+            <div style="color:#10B981;">[OK] assistance.noeljedayala.workers.dev (200 OK · TLS 1.3)</div>
+            <div style="color:#10B981;">[OK] digitalop.noeljedayala.workers.dev  (200 OK · TLS 1.3)</div>
+            <div style="color:#9CA3AF;margin-top:10px;">$ stack --inspect</div>
+            <div style="color:#E5E7EB;">Frontend : HTML5, CSS3, TypeScript, React 18, Vite, Tailwind</div>
+            <div style="color:#E5E7EB;">Systems  : Python (FastAPI), Rust (Tauri v2), SQLite WAL</div>
+            <div style="color:#E5E7EB;">Commerce : Shopify Liquid, WordPress, WooCommerce, Cloudflare</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="templates" class="section section-bordered">
+    <!-- LIVE INDUSTRY STARTER TEMPLATES -->
+    <section id="templates" class="section">
       <div class="container">
-        <div class="section-head">
-          <p class="mono-tag">01 // LIVE INDUSTRY TEMPLATES</p>
-          <h2>Ready-to-Customize Client Starter Templates</h2>
-          <p class="section-desc">Zero-build HTML5/CSS3/Vanilla JS starter layouts with interactive brand-color &amp; font previewers, mobile-first accessibility, and US compliance pages.</p>
+        <div class="section-header">
+          <span class="eyebrow">LIVE INDUSTRY TEMPLATES // ZERO-BUILD STATIC</span>
+          <h2 class="section-title">Ready-to-Customize Client Starter Templates</h2>
+          <p class="section-desc">Preview live industry templates with interactive brand-color &amp; font switchers, mobile-first accessibility, and US compliance pages.</p>
         </div>
 
-        <div class="card-grid-3">
-          <article class="post-card">
-            <span class="mono-tag">CLINICAL LIGHT &bull; PORCELAIN &amp; TEAL</span>
-            <h3>Dental &amp; Medical Practice</h3>
-            <p>Conversion-focused patient experience with treatment catalog, insurance transparency, patient stories, clinic hours, and interactive appointment modal.</p>
-            <a class="card-link" href="./templates/dental/">Preview Live Template &rarr;</a>
+        <div class="testimonial-grid">
+          <article class="feature-card">
+            <div class="card-body">
+              <span class="mono-tag">CLINICAL LIGHT // PORCELAIN &amp; TEAL</span>
+              <h3 class="card-title">Dental &amp; Medical Practice</h3>
+              <p class="card-text">
+                Conversion-focused patient layout with treatment grid, insurance transparency, patient reviews, clinic hours, and interactive appointment request modal.
+              </p>
+              <a href="./templates/dental/" class="btn btn-primary btn-sm" style="margin-top:16px;">Preview Live Template &rarr;</a>
+            </div>
           </article>
 
-          <article class="post-card">
-            <span class="mono-tag">HIGH CONTRAST &bull; SLATE &amp; AMBER</span>
-            <h3>Home Services &amp; Trades</h3>
-            <p>24/7 emergency dispatch banner, core trade service cards, workmanship guarantee, local coverage area, and instant estimate request form.</p>
-            <a class="card-link" href="./templates/home-services/">Preview Live Template &rarr;</a>
+          <article class="feature-card">
+            <div class="card-body">
+              <span class="mono-tag">HIGH CONTRAST // SLATE &amp; AMBER</span>
+              <h3 class="card-title">Home Services &amp; Trades</h3>
+              <p class="card-text">
+                24/7 emergency dispatch strip, core trade services grid, workmanship guarantee, local service-area coverage, and instant estimate request form.
+              </p>
+              <a href="./templates/home-services/" class="btn btn-primary btn-sm" style="margin-top:16px;">Preview Live Template &rarr;</a>
+            </div>
           </article>
 
-          <article class="post-card">
-            <span class="mono-tag">EDITORIAL &bull; IVORY, NAVY &amp; GOLD</span>
-            <h3>Law &amp; Accounting Advisory</h3>
-            <p>Practice area breakdown, partner credential metrics, interactive fee &amp; retainer clarity FAQ accordion, and confidential consultation form.</p>
-            <a class="card-link" href="./templates/law-accounting/">Preview Live Template &rarr;</a>
+          <article class="feature-card">
+            <div class="card-body">
+              <span class="mono-tag">EDITORIAL // IVORY, NAVY &amp; GOLD</span>
+              <h3 class="card-title">Law &amp; Accounting Advisory</h3>
+              <p class="card-text">
+                Practice area breakdown, partner credential metrics, interactive fee &amp; retainer clarity FAQ accordion, and confidential consultation form.
+              </p>
+              <a href="./templates/law-accounting/" class="btn btn-primary btn-sm" style="margin-top:16px;">Preview Live Template &rarr;</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section section-alt">
+    <!-- REAL CANVA WEBSITE AUDIT & ENGINEERING CASE STUDIES -->
+    <section id="case-studies" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <p class="mono-tag">02 // SELECTED WORK, AUDITS &amp; ARCHITECTURE</p>
-          <h2>Case Studies &amp; Engineering Notes</h2>
-          <p class="section-desc">Real client conversion audits, production e-commerce operations, custom software builds, and edge deployment architecture.</p>
+        <div class="section-header">
+          <span class="eyebrow">REAL CLIENT AUDITS &amp; PRODUCTION ARCHITECTURE</span>
+          <h2 class="section-title">Web Optimization Proposals, Storefronts &amp; Custom Software</h2>
+          <p class="section-desc">From executive website conversion audits exported from Canva to custom Git-deployed Cloudflare edge networks and full-stack applications.</p>
         </div>
 
         <div class="card-grid-2">
-          <article class="post-card">
-            <span class="mono-tag">AUDIT 01 // CONVERSION &amp; REBUILD ROADMAP</span>
-            <h3>Website Conversion &amp; Rebuild Audits (amyfitzpatrick.com)</h3>
-            <p>
-              Delivered a full-stack UX, Core Web Vitals, and funnel audit comparing targeted WordPress/Elementor optimization (<code>$550</code>) against a clean-slate modern rebuild (<code>$1,100</code>) with automated booking and email capture.
-            </p>
+          <!-- Case Study 1: Amy Fitzpatrick Website Optimization Proposal -->
+          <article class="portfolio-card">
+            <div class="card-media" data-lightbox-src="assets/website-audit-proposal.png" data-lightbox-title="Website Optimization Proposal 2026 — Executive Summary (amyfitzpatrick.com)" data-lightbox-desc="Comprehensive technical & UX audit covering conversion funnel friction, mobile responsiveness, SEO metadata structure, and WordPress/Elementor vs. Full Rebuild architecture.">
+              <img src="assets/website-audit-proposal.png" alt="Website Optimization Proposal 2026 Cover Plate" loading="lazy" />
+              <span class="zoom-pill">🔍 Inspect Proposal Cover</span>
+            </div>
+            <div class="card-body">
+              <span class="mono-tag">CASE STUDY 01 // TECHNICAL AUDIT &amp; REBUILD ROADMAP</span>
+              <h3 class="card-title">Website Optimization &amp; Rebuild Proposal (amyfitzpatrick.com)</h3>
+              <p class="card-text">
+                Conducted a full-stack UX, performance, and conversion audit for <strong>Amy Fitzpatrick</strong>, delivering a tiered engineering roadmap comparing targeted WordPress/Elementor optimization (`$550`) against a clean-slate modern rebuild (`$1,100`) with automated booking and email capture.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Technical UX Audit</span>
+                <span class="tag">Conversion Architecture</span>
+                <span class="tag">WordPress / Custom Rebuild</span>
+              </div>
+            </div>
           </article>
 
-          <article class="post-card">
-            <span class="mono-tag">COMMERCE 02 // SHOPIFY &amp; WOOCOMMERCE</span>
-            <h3>High-Volume E-Commerce Storefronts (Retrospec, Oliver Logan, DD Apparel)</h3>
-            <p>
-              Managed catalog engineering, Liquid template customization, structured SEO metadata, and storefront asset compression for US and Australian brands including <strong>Retrospec</strong>, <strong>Oliver Logan</strong>, and <strong>DD Apparel (DoubleDyed)</strong>.
-            </p>
+          <!-- Case Study 2: UX Opportunities & Funnel Diagnostics -->
+          <article class="portfolio-card">
+            <div class="card-media" data-lightbox-src="assets/website-ux-opportunities.png" data-lightbox-title="Key Website Opportunities — Conversion & UX Diagnostics" data-lightbox-desc="Detailed diagnostic breakdown of homepage hierarchy, call-to-action placement, mobile viewport rendering, and lead capture integration.">
+              <img src="assets/website-ux-opportunities.png" alt="Key Website Opportunities Technical Audit Slide" loading="lazy" />
+              <span class="zoom-pill">🔍 Inspect Technical Slide</span>
+            </div>
+            <div class="card-body">
+              <span class="mono-tag">CASE STUDY 02 // CONVERSION FUNNEL DIAGNOSTICS</span>
+              <h3 class="card-title">UX Bottleneck Analysis &amp; Lead-Capture Engineering</h3>
+              <p class="card-text">
+                Translates technical performance metrics (Core Web Vitals, mobile tap-target sizing, DOM bloat, and CTA hierarchy) into clear business recommendations that non-technical stakeholders and founders can immediately approve.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Core Web Vitals</span>
+                <span class="tag">Mobile-First UI</span>
+                <span class="tag">Lead Funnel Integration</span>
+              </div>
+            </div>
           </article>
 
-          <article class="post-card">
-            <span class="mono-tag">SYSTEMS 03 // FULL-STACK &amp; DESKTOP</span>
-            <h3>React 18, TypeScript, Python FastAPI &amp; Rust/Tauri v2 Apps</h3>
-            <p>
-              Built an <strong>AI Job Application &amp; Resume Engine</strong> (React 18, TypeScript, Tailwind CSS, Python FastAPI, SQLite WAL) and a <strong>Real-Time Meeting Co-Pilot HUD</strong> (Rust/Tauri v2, React/Vite, Faster-Whisper ASR).
-            </p>
+          <!-- Case Study 3: E-Commerce Storefront Engineering -->
+          <article class="feature-card">
+            <div class="card-body">
+              <span class="mono-tag">CASE STUDY 03 // E-COMMERCE STOREFRONT OPERATIONS</span>
+              <h3 class="card-title">High-Volume Shopify &amp; WooCommerce Storefronts (Retrospec, Oliver Logan, DD Apparel)</h3>
+              <p class="card-text">
+                Managed product catalog engineering, storefront merchandising, custom HTML/CSS/Liquid template adjustments, structured SEO metadata, and high-res image compression for US &amp; Australian brands including <strong>Retrospec</strong>, <strong>Oliver Logan</strong>, and <strong>DD Apparel (DoubleDyed)</strong>.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Shopify &amp; Liquid</span>
+                <span class="tag">WooCommerce</span>
+                <span class="tag">Catalog Schema &amp; SEO</span>
+                <span class="tag">Asset Optimization</span>
+              </div>
+            </div>
           </article>
 
-          <article class="post-card">
-            <span class="mono-tag">EDGE 04 // CLOUDFLARE WORKERS CI/CD</span>
-            <h3>Multi-Subdomain Cloudflare Workers &amp; Git Pipeline</h3>
-            <p>
-              Operates a 7-node portfolio network managed via <code>console.bat</code>, plain-text AI context mirroring (<code>_mirror/</code>), GitHub repositories, and automated zero-cost Cloudflare Workers edge deployments.
-            </p>
+          <!-- Case Study 4: Full-Stack React / FastAPI / Rust Applications -->
+          <article class="feature-card">
+            <div class="card-body">
+              <span class="mono-tag">CASE STUDY 04 // FULL-STACK &amp; DESKTOP WEB APPS</span>
+              <h3 class="card-title">React + TypeScript + FastAPI &amp; Rust/Tauri Applications</h3>
+              <p class="card-text">
+                Engineered full-stack web and desktop applications including an <strong>AI Job Application &amp; Resume Engine</strong> (React 18, TypeScript, Tailwind CSS, Python FastAPI, SQLite WAL) and a <strong>Real-Time Meeting Co-Pilot HUD</strong> (Rust/Tauri v2, React/Vite frontend, Faster-Whisper ASR).
+              </p>
+              <div class="tag-list">
+                <span class="tag">React 18 &amp; TypeScript</span>
+                <span class="tag">Python FastAPI</span>
+                <span class="tag">Rust &amp; Tauri v2</span>
+                <span class="tag">SQLite WAL</span>
+              </div>
+            </div>
           </article>
-        </div>
-
-        <div id="stack" class="stack-panel">
-          <div class="stack-head">
-            <span class="mono-tag">ABOUT &amp; TECH STACK</span>
-            <h3>Production Engineering Toolkit</h3>
-          </div>
-          <ul class="stack-pills">
-            <li>HTML5 / CSS3 / Vanilla JS</li>
-            <li>React 18 &amp; TypeScript</li>
-            <li>Tailwind CSS &amp; Vite</li>
-            <li>Python (FastAPI) &amp; SQLite WAL</li>
-            <li>Rust &amp; Tauri v2</li>
-            <li>Shopify Liquid &amp; WooCommerce</li>
-            <li>WordPress &amp; Technical SEO</li>
-            <li>Cloudflare Workers &amp; Pages</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <section id="reviews" class="section section-bordered">
+    <!-- LIVE 7-NODE CLOUDFLARE EDGE TOPOLOGY -->
+    <section id="edge-topology" class="section">
       <div class="container">
-        <div class="section-head">
-          <p class="mono-tag">03 // CLIENT ENDORSEMENTS</p>
-          <h2>Trusted by Founders, CEOs &amp; Program Partners</h2>
+        <div class="section-header">
+          <span class="eyebrow">LIVE INFRASTRUCTURE PROOF</span>
+          <h2 class="section-title">Multi-Subdomain Cloudflare Workers Architecture</h2>
+          <p class="section-desc">This entire 7-site portfolio network is version-controlled via a custom Windows CLI release pipeline (`console.bat`), mirrored for AI context ingestion (`_mirror/`), pushed to dedicated GitHub repositories, and auto-deployed to Cloudflare’s global edge.</p>
         </div>
 
-        <div class="card-grid-3">
-          <blockquote class="review-card">
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>&ldquo;Noel has a very thorough and involved process for any job that he does which makes him the most reliable contractor I have worked with. He is highly responsive, creative, and diligent. I would recommend him to anyone and I will be working with him again. Thank you Noel!&rdquo;</p>
-            <footer>
-              <strong>O. Timsit</strong>
-              <span>CEO &mdash; DoubleDyed (USA &bull; Upwork Verified)</span>
-            </footer>
-          </blockquote>
+        <div class="spec-table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Edge Subdomain Node</th>
+                <th>PencilPlaybook Theme Preset</th>
+                <th>GitHub CI/CD Repository</th>
+                <th>Edge Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://resume.noeljedayala.workers.dev/" target="_blank" rel="noopener"><strong>resume.noeljedayala.workers.dev</strong> ↗</a></td>
+                <td>Executive Master Hub</td>
+                <td><code>shakti2-cmd/noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Live</td>
+              </tr>
+              <tr>
+                <td><a href="https://graphic.noeljedayala.workers.dev/" target="_blank" rel="noopener"><strong>graphic.noeljedayala.workers.dev</strong> ↗</a></td>
+                <td><code>Volt</code> (Neobrutalist Studio)</td>
+                <td><code>cloudflare-website-graphic.noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Live</td>
+              </tr>
+              <tr>
+                <td><a href="https://webdev.noeljedayala.workers.dev/"><strong>webdev.noeljedayala.workers.dev</strong> (Current)</a></td>
+                <td><code>Ember</code> (Terminal Engineering)</td>
+                <td><code>cloudflare-website-webdev.noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Active</td>
+              </tr>
+              <tr>
+                <td><a href="https://automation.noeljedayala.workers.dev/" target="_blank" rel="noopener"><strong>automation.noeljedayala.workers.dev</strong> ↗</a></td>
+                <td><code>Midnight</code> (Telemetry Pipeline)</td>
+                <td><code>cloudflare-website-automation.noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Live</td>
+              </tr>
+              <tr>
+                <td><a href="https://socmed.noeljedayala.workers.dev/" target="_blank" rel="noopener"><strong>socmed.noeljedayala.workers.dev</strong> ↗</a></td>
+                <td><code>Bloom</code> (Creator Growth Studio)</td>
+                <td><code>cloudflare-website-socmed.noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Live</td>
+              </tr>
+              <tr>
+                <td><a href="https://assistance.noeljedayala.workers.dev/" target="_blank" rel="noopener"><strong>assistance.noeljedayala.workers.dev</strong> ↗</a></td>
+                <td><code>Grove</code> (Executive Partner Dossier)</td>
+                <td><code>cloudflare-website-assistance.noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Live</td>
+              </tr>
+              <tr>
+                <td><a href="https://digitalop.noeljedayala.workers.dev/" target="_blank" rel="noopener"><strong>digitalop.noeljedayala.workers.dev</strong> ↗</a></td>
+                <td><code>MD3 Corporate</code> (Global Operations)</td>
+                <td><code>cloudflare-website-digitalop.noelayala</code></td>
+                <td><span class="status-dot"></span>200 OK · Live</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-          <blockquote class="review-card">
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>&ldquo;Working with Noel was seamless from start to finish. He immediately understood our brand direction, delivered polished visual assets ahead of schedule, and brought proactive ideas that elevated our entire campaign presentation.&rdquo;</p>
-            <footer>
+    <!-- VERIFIED CLIENT TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">VERIFIED CLIENT ENDORSEMENTS</span>
+          <h2 class="section-title">Trusted by Founders, CEOs &amp; Educators Across the US &amp; Australia</h2>
+          <p class="section-desc">Real feedback from long-term international clients across Upwork and direct agency retainers.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="quote">
+              “Noel has a very thorough and involved process for any job that he does which makes him the most reliable contractor I have worked with. He is highly responsive, creative, and diligent. I would recommend him to anyone and I will be working with him again. Thank you Noel!”
+            </blockquote>
+            <div class="author-meta">
+              <strong>O. Timsit</strong>
+              <span>CEO — DoubleDyed (United States · Upwork Verified)</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="quote">
+              “Working with Noel was seamless from start to finish. He immediately understood our brand direction, delivered polished visual assets ahead of schedule, and brought proactive ideas that elevated our entire campaign presentation.”
+            </blockquote>
+            <div class="author-meta">
               <strong>Pauline Bautista</strong>
               <span>Brand &amp; Marketing Collaborator</span>
-            </footer>
-          </blockquote>
+            </div>
+          </article>
 
-          <blockquote class="review-card">
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>&ldquo;Reliable, detail-oriented, and extraordinarily versatile. Noel handles complex digital deliverables, instructional layouts, and day-to-day operational updates with zero friction and consistent excellence.&rdquo;</p>
-            <footer>
+          <article class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="quote">
+              “Reliable, detail-oriented, and extraordinarily versatile. Noel handles complex digital deliverables, instructional layouts, and day-to-day operational updates with zero friction and consistent excellence.”
+            </blockquote>
+            <div class="author-meta">
               <strong>Lynne Locke</strong>
               <span>Educator &amp; Program Partner</span>
-            </footer>
-          </blockquote>
+            </div>
+          </article>
+        </div>
+
+        <div class="canva-proof-banner">
+          <div class="canva-proof-text">
+            <span class="mono-tag">CANVA PORTFOLIO PLATE // VERIFIED REVIEWS</span>
+            <h3>Inspect Original Portfolio Testimonial Sheet</h3>
+            <p>Exported directly from Noel Ayala’s 2026 Canva Visual &amp; Operations Portfolio.</p>
+          </div>
+          <button type="button" class="btn btn-secondary" data-lightbox-src="assets/client-testimonials.jpg" data-lightbox-title="Verified Client Testimonials — 2026 Portfolio Plate" data-lightbox-desc="Original Canva portfolio plate featuring 5-star reviews from Pauline Bautista, Lynne Locke, and O. Timsit (CEO of DoubleDyed, USA).">
+            View Full Testimonial Plate ↗
+          </button>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section-alt">
+    <!-- BOOKING & DIRECT CONTACT -->
+    <section id="contact" class="section contact-section">
       <div class="container">
-        <div class="section-head">
-          <p class="mono-tag">04 // DIRECT INQUIRY &amp; DISCOVERY CALL</p>
-          <h2>Start a Website Build, Storefront Optimization, or Custom Demo</h2>
-          <p class="section-desc">Send a project brief directly to <strong>noeljedayala@gmail.com</strong> or book a 1-on-1 discovery call below.</p>
+        <div class="section-header">
+          <span class="eyebrow">DIRECT HIRE &amp; CONSULTATION</span>
+          <h2 class="section-title">Need a Fast Website, Storefront Optimization, or Custom Web App?</h2>
+          <p class="section-desc">Send your technical scope below or schedule a live engineering discovery call.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-card">
-            <h3>Send a Direct Inquiry</h3>
-            <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajax/noeljedayala@gmail.com" method="POST">
+            <h3 class="card-heading">Send a Direct Brief</h3>
+            <p class="card-sub">Routed directly to <strong>noeljedayala@gmail.com</strong>. Typical response time: under 4 hours (US/AU/PH overlap).</p>
+            <form id="contact-form" action="https://formsubmit.co/ajax/noeljedayala@gmail.com" method="POST" class="contact-form">
               <input type="hidden" name="_subject" value="Demo Showcase (demo-site.noeljedayala.workers.dev) — New Inquiry" />
               <input type="hidden" name="_template" value="table" />
               <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
-              <div class="form-row-2">
-                <div class="field">
+              <div class="form-row">
+                <div class="form-group">
                   <label for="name">Your Name *</label>
-                  <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+                  <input type="text" id="name" name="name" required placeholder="Jane Doe" />
                 </div>
-                <div class="field">
+                <div class="form-group">
                   <label for="email">Work Email *</label>
-                  <input id="email" name="email" type="email" required placeholder="jane@company.com" />
+                  <input type="email" id="email" name="email" required placeholder="jane@company.com" />
                 </div>
               </div>
 
-              <div class="form-row-2">
-                <div class="field">
+              <div class="form-row">
+                <div class="form-group">
                   <label for="organization">Company / Brand</label>
-                  <input id="organization" name="organization" type="text" placeholder="Acme Corp" />
+                  <input type="text" id="organization" name="organization" placeholder="Acme Corp" />
                 </div>
-                <div class="field">
-                  <label for="engagement">Project Type</label>
+                <div class="form-group">
+                  <label for="engagement">Engagement Type</label>
                   <select id="engagement" name="engagement">
-                    <option value="Custom Client Website">Custom Client Website</option>
-                    <option value="Storefront Optimization (Shopify / WP)">Storefront Optimization (Shopify / WP)</option>
-                    <option value="Full-Stack Web App">Full-Stack Web App</option>
+                    <option value="Full-Time / Dedicated Role">Full-Time / Dedicated Role</option>
+                    <option value="Monthly Retainer">Monthly Retainer</option>
+                    <option value="Fixed-Scope Project">Fixed-Scope Project</option>
                     <option value="Consultation / Audit">Consultation / Audit</option>
                   </select>
                 </div>
               </div>
 
-              <div class="field">
-                <label for="message">Project Scope or Goals *</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Share your goals, timeline, and target industry..."></textarea>
+              <div class="form-group">
+                <label for="message">Project Scope or Role Details *</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Share your goals, timeline, and what you are looking to achieve..."></textarea>
               </div>
 
-              <button id="submitBtn" class="btn btn-primary btn-full" type="submit">Send Direct Inquiry</button>
-              <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-full">Send Direct Inquiry</button>
+              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
             </form>
 
-            <div class="channel-list">
-              <a href="mailto:noeljedayala@gmail.com">noeljedayala@gmail.com</a>
-              <a href="tel:+639278652574">+63 927 865 2574</a>
-              <a href="https://www.upwork.com/freelancers/~01413f629ec474e90c" target="_blank" rel="noopener noreferrer">Upwork &#8599;</a>
-              <a href="https://www.linkedin.com/in/noelayala/" target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a>
-              <a href="https://github.com/shakti2-cmd" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
+            <div class="direct-channels">
+              <a href="mailto:noeljedayala@gmail.com" class="channel-pill">✉ noeljedayala@gmail.com</a>
+              <a href="tel:+639278652574" class="channel-pill">☎ +63 927 865 2574</a>
+              <a href="https://www.upwork.com/freelancers/~01413f629ec474e90c" target="_blank" rel="noopener" class="channel-pill">Upwork Profile ↗</a>
+              <a href="https://www.linkedin.com/in/noelayala/" target="_blank" rel="noopener" class="channel-pill">LinkedIn ↗</a>
+              <a href="https://github.com/shakti2-cmd" target="_blank" rel="noopener" class="channel-pill">GitHub ↗</a>
             </div>
           </div>
 
           <div class="calendar-card">
-            <div class="calendar-head">
+            <div class="calendar-card-header">
               <div>
                 <span class="mono-tag">LIVE GOOGLE CALENDAR</span>
-                <h3>Book a Discovery Call</h3>
+                <h3 class="card-heading">Book a 1-on-1 Discovery Call</h3>
               </div>
-              <a class="btn btn-outline btn-sm" href="https://calendar.app.google/Q2oPX485GmtjhGrF7" target="_blank" rel="noopener noreferrer">Open in New Tab &#8599;</a>
+              <a href="https://calendar.app.google/Q2oPX485GmtjhGrF7" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Open in New Tab ↗</a>
             </div>
-            <div class="calendar-frame-wrap">
+            <div class="calendar-embed-wrap">
               <iframe
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2XO7GI3LntbHEulO68_33mlqqtU74pimPQ8VeTuUrTK0xz6ShaPnKzOOGsl75nATmoC44oPDFs?gv=true"
                 title="Schedule an appointment with Noel Ayala"
                 loading="lazy"
+                frameborder="0"
               ></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="portfolio-lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-content">
+        <div class="lightbox-bar">
+          <div>
+            <h3 id="lightbox-title" class="lightbox-title">Portfolio Preview</h3>
+            <p id="lightbox-desc" class="lightbox-desc"></p>
+          </div>
+          <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close preview">✕ Close</button>
+        </div>
+        <div class="lightbox-img-wrap">
+          <img id="lightbox-img" src="" alt="Portfolio full preview" />
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Noel Jedidiah Ayala &bull; Web Engineering &amp; Edge Systems &bull; Tagum City, Davao Region, Philippines</p>
-      <div class="footer-links">
-        <a href="https://webdev.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">webdev.noeljedayala.workers.dev</a>
-        <a href="https://resume.noeljedayala.workers.dev/" target="_blank" rel="noopener noreferrer">resume.noeljedayala.workers.dev</a>
-        <a href="https://github.com/shakti2-cmd" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/noelayala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.upwork.com/freelancers/~01413f629ec474e90c" target="_blank" rel="noopener noreferrer">Upwork</a>
-        <a href="mailto:noeljedayala@gmail.com">Email</a>
+      <div>
+        <strong>Noel Jedidiah Ayala</strong> · Web Engineering & Edge Systems · Tagum City, Davao Region, Philippines (UTC+8 · US/AU/EU Overlap)
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="https://resume.noeljedayala.workers.dev/">Master Resume</a>
+        <a href="https://www.upwork.com/freelancers/~01413f629ec474e90c" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.linkedin.com/in/noelayala/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shakti2-cmd" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:noeljedayala@gmail.com">noeljedayala@gmail.com</a>
       </div>
     </div>
   </footer>
 
-  <script src="./app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

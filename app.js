@@ -1,94 +1,176 @@
 (function () {
-  // Theme persistence (default: crisp light paper)
-  const root = document.documentElement;
-  const themeBtn = document.getElementById("themeToggle");
-  const THEME_KEY = "demo_showcase_theme";
+  'use strict';
+
+  var root = document.documentElement;
+  var defaultTheme = root.getAttribute('data-default-theme') || 'light';
+  var storageKey = 'na_theme_' + (root.getAttribute('data-site-id') || 'site');
 
   function applyTheme(theme) {
-    const resolved = theme === "dark" ? "dark" : "light";
-    root.setAttribute("data-theme", resolved);
-    if (themeBtn) {
-      themeBtn.setAttribute("aria-pressed", String(resolved === "dark"));
-      themeBtn.textContent = resolved === "dark" ? "Light Mode" : "Dark Mode";
+    root.setAttribute('data-theme', theme);
+    var toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+      var label = toggleBtn.querySelector('.theme-label');
+      if (label) {
+        label.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+      }
+      toggleBtn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' theme');
     }
-    try {
-      localStorage.setItem(THEME_KEY, resolved);
-    } catch (err) {}
   }
 
-  let initialTheme = "light";
+  var savedTheme = null;
   try {
-    const saved = localStorage.getItem(THEME_KEY);
-    if (saved === "dark" || saved === "light") initialTheme = saved;
-  } catch (err) {}
-  applyTheme(initialTheme);
+    savedTheme = localStorage.getItem(storageKey);
+  } catch (e) {}
+  applyTheme(savedTheme || defaultTheme);
 
-  if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme");
-      applyTheme(current === "dark" ? "light" : "dark");
-    });
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    applyTheme(root.getAttribute('data-theme') || defaultTheme);
 
-  // Mobile menu drawer
-  const menuBtn = document.getElementById("mobileMenuBtn");
-  const nav = document.getElementById("primaryNav");
-  if (menuBtn && nav) {
-    function closeMenu() {
-      nav.classList.remove("is-open");
-      menuBtn.setAttribute("aria-expanded", "false");
+    var toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        try {
+          localStorage.setItem(storageKey, next);
+        } catch (e) {}
+      });
     }
 
-    menuBtn.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      menuBtn.setAttribute("aria-expanded", String(open));
-    });
-
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && nav.classList.contains("is-open")) {
-        closeMenu();
-        menuBtn.focus();
-      }
-    });
-  }
-
-  // FormSubmit AJAX contact form
-  const contactForm = document.getElementById("contactForm");
-  const submitBtn = document.getElementById("submitBtn");
-  const formStatus = document.getElementById("formStatus");
-
-  if (contactForm && submitBtn && formStatus) {
-    contactForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (!contactForm.reportValidity()) return;
-
-      const originalLabel = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending...";
-      formStatus.textContent = "";
-      formStatus.classList.remove("is-error", "is-success");
-
-      try {
-        const res = await fetch(contactForm.action, {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(contactForm)
+    // Mobile nav toggle
+    var menuBtn = document.getElementById('mobile-menu-btn');
+    var navMenu = document.getElementById('nav-menu');
+    if (menuBtn && navMenu) {
+      menuBtn.addEventListener('click', function () {
+        var expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('is-open');
+      });
+      navMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menuBtn.setAttribute('aria-expanded', 'false');
+          navMenu.classList.remove('is-open');
         });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        formStatus.classList.add("is-success");
-        formStatus.textContent = "Inquiry sent! Noel will reply to your email within 4 hours.";
-        contactForm.reset();
-      } catch (err) {
-        formStatus.classList.add("is-error");
-        formStatus.innerHTML = 'Could not submit via web form right now. Please email <a href="mailto:noeljedayala@gmail.com">noeljedayala@gmail.com</a> directly.';
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-      }
+      });
+    }
+
+    // Category filter tabs (if present)
+    var filterBtns = document.querySelectorAll('[data-filter-btn]');
+    var filterItems = document.querySelectorAll('[data-filter-item]');
+    if (filterBtns.length > 0 && filterItems.length > 0) {
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var category = btn.getAttribute('data-filter-btn');
+          filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          filterItems.forEach(function (item) {
+            var cats = (item.getAttribute('data-filter-item') || '').split(' ');
+            if (category === 'all' || cats.indexOf(category) !== -1) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    // Lightbox modal for Canva portfolio visuals
+    var lightbox = document.getElementById('portfolio-lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxTitle = document.getElementById('lightbox-title');
+    var lightboxDesc = document.getElementById('lightbox-desc');
+    var lightboxClose = document.getElementById('lightbox-close');
+
+    function openLightbox(src, title, desc) {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      lightboxImg.alt = title || 'Portfolio visual preview';
+      if (lightboxTitle) lightboxTitle.textContent = title || '';
+      if (lightboxDesc) lightboxDesc.textContent = desc || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-lightbox-src]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        openLightbox(
+          el.getAttribute('data-lightbox-src'),
+          el.getAttribute('data-lightbox-title'),
+          el.getAttribute('data-lightbox-desc')
+        );
+      });
     });
-  }
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
+    }
+    if (lightbox) {
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // FormSubmit AJAX handler
+    var contactForm = document.getElementById('contact-form');
+    var formStatus = document.getElementById('form-status');
+    var submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending Inquiry...';
+        }
+        if (formStatus) {
+          formStatus.textContent = '';
+          formStatus.className = 'form-status';
+        }
+
+        var formData = new FormData(contactForm);
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(function (response) {
+            if (response.ok) {
+              contactForm.reset();
+              if (formStatus) {
+                formStatus.textContent = 'Thank you! Your message has been sent directly to Noel Ayala (noeljedayala@gmail.com).';
+                formStatus.className = 'form-status is-success';
+              }
+            } else {
+              throw new Error('Submission failed');
+            }
+          })
+          .catch(function () {
+            if (formStatus) {
+              formStatus.textContent = 'Could not send via form right now. Please email noeljedayala@gmail.com directly or book a call above.';
+              formStatus.className = 'form-status is-error';
+            }
+          })
+          .finally(function () {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Direct Inquiry';
+            }
+          });
+      });
+    }
+  });
 })();
