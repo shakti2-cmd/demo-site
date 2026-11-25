@@ -1,16 +1,5 @@
 (function () {
-  // Proposal Preview Bar & What We Upgraded Popover
-  const proposalBar = document.getElementById("proposalPreviewBar");
-  const dismissBtn = document.getElementById("dismissProposalBar");
-  const STORAGE_KEY = "amy_proposal_bar_dismissed";
-  if (proposalBar && sessionStorage.getItem(STORAGE_KEY) === "1") proposalBar.hidden = true;
-  if (dismissBtn && proposalBar) {
-    dismissBtn.addEventListener("click", () => {
-      proposalBar.hidden = true;
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    });
-  }
-
+  // Proposal Preview Bar Calendar Modal
   const bookCallBtn = document.getElementById("bookCallBarBtn");
   const calendarModal = document.getElementById("calendarBookingModal");
   const closeCalendarBtn = document.getElementById("closeCalendarModalBtn");

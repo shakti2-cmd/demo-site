@@ -1,19 +1,4 @@
 (function () {
-  const proposalBar = document.getElementById("proposalPreviewBar");
-  const dismissBtn = document.getElementById("dismissProposalBar");
-  const STORAGE_KEY = "rh_proposal_bar_dismissed";
-
-  if (proposalBar && sessionStorage.getItem(STORAGE_KEY) === "1") {
-    proposalBar.hidden = true;
-  }
-
-  if (dismissBtn && proposalBar) {
-    dismissBtn.addEventListener("click", () => {
-      proposalBar.hidden = true;
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    });
-  }
-
   const bookCallBtn = document.getElementById("bookCallBarBtn");
   const calendarModal = document.getElementById("calendarBookingModal");
   const closeCalendarBtn = document.getElementById("closeCalendarModalBtn");

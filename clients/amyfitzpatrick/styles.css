@@ -24,13 +24,11 @@ body[data-preview-mode="template"] #proposalPreviewBar, #proposalPreviewBar[hidd
 
 /* Proposal Preview Bar */
 .proposal-bar { position: relative; z-index: 55; background: #101f1c; color: #f8fafc; border-bottom: 2px solid var(--seed-gold); padding: 0.55rem 0; }
-.proposal-bar-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
-.proposal-bar-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-size: 0.9rem; }
+.proposal-bar-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; text-align: center; gap: 0.75rem; }
+.proposal-bar-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; text-align: center; gap: 0.75rem; font-size: 0.9rem; }
 .proposal-badge { background: var(--seed-gold); color: #101f1c; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.25rem 0.65rem; border-radius: 999px; }
-.proposal-bar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
-.proposal-cta, .proposal-close { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; cursor: pointer; }
-.proposal-cta { background: var(--seed-gold-bright); color: #101f1c; padding: 0 1rem; border: none; }
-.proposal-close { min-width: 44px; background: transparent; color: #f8fafc; border: 1px solid #48605b; font-size: 1.35rem; }
+.proposal-badge-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; background: var(--seed-gold); color: #101f1c; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.4rem 1.15rem; border-radius: 999px; border: none; cursor: pointer; transition: filter 0.18s ease, transform 0.18s ease; }
+.proposal-badge-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 40; background: rgba(250, 247, 242, 0.96); border-bottom: 1px solid var(--seed-border); backdrop-filter: blur(8px); }

@@ -56,7 +56,8 @@ body[data-preview-mode="template"] #proposalPreviewBar,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   gap: 0.75rem;
 }
 
@@ -64,7 +65,9 @@ body[data-preview-mode="template"] #proposalPreviewBar,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
   font-size: 0.9rem;
 }
 
@@ -78,38 +81,27 @@ body[data-preview-mode="template"] #proposalPreviewBar,
   border-radius: 999px;
 }
 
-.proposal-bar-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.proposal-cta, .proposal-close {
+.proposal-badge-btn {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.proposal-cta {
   background: var(--amber);
   color: #0f172a;
-  padding: 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1.15rem;
+  border-radius: 999px;
   border: none;
+  cursor: pointer;
+  transition: filter 0.18s ease, transform 0.18s ease;
 }
 
-.proposal-close {
-  min-width: 44px;
-  background: transparent;
-  color: #f8fafc;
-  border: 1px solid #475569;
-  font-size: 1.35rem;
+.proposal-badge-btn:hover {
+  filter: brightness(1.09);
+  transform: translateY(-1px);
 }
 
 /* Dispatch Strip */
